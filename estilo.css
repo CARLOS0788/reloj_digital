@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -6,7 +7,35 @@ body {
     height: 100vh;
     background-color: #282c34;
     margin: 0;
-    color: rgb(4, 183, 183);
+    color: rgb(7, 218, 250);
+    text-align: center;
+    flex-direction: column;
+    /* Para apilar los elementos verticalmente */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    /* Limitar el ancho para evitar que se estire demasiado en pantallas grandes */
+    padding: 20px;
+}
+
+.logo {
+    width: 200px;
+    /* Tamaño del logo */
+    margin-bottom: 20px;
+    /* Espacio debajo del logo */
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ff00d9;
 }
 
 .clock {
@@ -16,35 +45,96 @@ body {
     padding: 20px 40px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
-.logo {
-    width: 250px;
-    /* Tamaño del logo */
-    margin-bottom: 20px;
-    /* Espacio debajo del logo */
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    /* Limitar el tamaño máximo del reloj */
 }
 
-.title {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #f01e87;
-}
+/* Estilos para el footer */
 .footer {
     position: absolute;
-    bottom: 2px;
+    bottom: 0px;
     /* Asegura que el footer quede en la parte inferior */
     width: 100%;
     text-align: center;
     padding: 0px;
     background-color: #282c34;
-    color: #72726d;
-    font-size: .8rem;
+    color: #9f9e98;
+   
+}
+p{
+     font-size: 15PX;
+}
+
+/* Media Queries */
+
+/* Para pantallas grandes como laptops (más de 1024px) */
+@media (min-width: 1024px) {
+    .logo {
+        font-size: 3rem;
+        /* Logo más grande */
+    }
+
+    .title {
+        font-size: 2.5rem;
+        /* Título más grande */
+    }
+
+    .clock {
+        font-size: 6rem;
+        /* Reloj más grande */
+        padding: 25px 50px;
+        /* Más padding */
+    }
+
+    .footer {
+        font-size: 1rem;
+    }
+}
+
+/* Para pantallas medianas como tabletas (768px a 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .clock {
+        font-size: 5rem;
+        padding: 20px 40px;
+    }
+
+    .footer {
+        font-size: 1rem;
+    }
+}
+
+/* Para pantallas pequeñas como teléfonos móviles (menos de 768px) */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+        /* Reducir tamaño del logo */
+        letter-spacing: 3px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        /* Reducir tamaño del título */
+    }
+
+    .clock {
+        font-size: 4rem;
+        /* Reducir tamaño del reloj */
+        padding: 15px 30px;
+        /* Reducir padding */
+    }
+
+    .footer {
+        font-size: 0.9rem;
+        /* Reducir tamaño del texto del footer */
+        padding: 8px;
+    }
 }
